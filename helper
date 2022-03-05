@@ -1,0 +1,1328 @@
+#! /usr/bin/env python3
+
+import os
+import signal
+import sys
+from sys import platform
+from time import sleep
+import webbrowser
+os.system("clear")
+os.system("resize -s 43 132 > /dev/null")
+
+#if os.geteuid() != 0:
+    #exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
+
+#if platform == "win32":
+    #webbrowser.open("https://www.youtube.com/watch?v=VAMP8DqSDjg")
+    #exit("This tool only support Debian distro . Exiting")
+
+R = '\033[31m'  # red
+G = '\033[32m'  # green
+C = '\033[36m'  # cyan
+W = '\033[0m'   # white
+Y = '\033[33m'  # yellow
+
+if not os.path.isdir("tools"):
+    os.mkdir("tools")
+
+os.system("clear")
+
+
+def handler(signum, frame):
+    os.system("clear")
+    print(f"{R}Ctrl C Detected Exiting")
+    exit()
+
+signal.signal(signal.SIGINT, handler)
+
+
+def main():
+    os.system("clear")
+    print(f'''{R}
+    
+    
+    ██╗░░██╗███████╗██╗░░░░░██████╗░███████╗██████╗░██████╗░░█████╗░██╗░░░██╗
+    ██║░░██║██╔════╝██║░░░░░██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔══██╗╚██╗░██╔╝
+    ███████║█████╗░░██║░░░░░██████╔╝█████╗░░██████╔╝██████╦╝██║░░██║░╚████╔╝░
+    ██╔══██║██╔══╝░░██║░░░░░██╔═══╝░██╔══╝░░██╔══██╗██╔══██╗██║░░██║░░╚██╔╝░░
+    ██║░░██║███████╗███████╗██║░░░░░███████╗██║░░██║██████╦╝╚█████╔╝░░░██║░░░
+    ╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░░░░╚══════╝╚═╝░░╚═╝╚═════╝░░╚════╝░░░░╚═╝░░░
+    {G} Tool coded by Nikhil                            Instagram:-https://instagram.com/iamnikhil2459
+    
+    ''')
+
+    print(f"1 {C}Wordlist Generation tools")
+    print(f"2 {G}Payload Creation tools")
+    print(f"3 {R}Wifi hacking tools")
+    print(f"4{Y} Password Cracking tools")
+    print(f"5{W} Sql Injection tools")
+    print(f"6{C} Phishing attack tools")
+    print(f"7{R} Anonymously Hiding tools")
+    print(f"8{G} Information Gathering tool")
+    print(f"9{Y} Evil-Twin attack tool")
+    print(f"10{C} Payload Injector")
+    print(f"11{R} Cross-Site scripting tools")
+    print(f"{W}12 Enable monitor mode")
+    print(f"{R}13 Social Media Finder tool")
+    print(f"{Y}14 Reverse shell tools")
+    print(f"{G}15 Camera & Microphone hacking tools")
+    print(f"{C}16 Forensic Tools")
+    print(f"{W}17 Buy Me a Coffe Please")
+    print(f"{C}18 Exit")
+
+
+    choice =input("HelperBoy==> ")
+
+    if choice == '1':
+        os.system("clear")
+        print(f'''{C}
+        
+        
+        ▒█  ▒█ █▀▀█ █▀▀█ █▀▀▄ █    ▀  █▀▀ ▀▀█▀▀ 　 ▀▀█▀▀ █▀▀█ █▀▀█ █   █▀▀ 
+        ▒█ █ █ █  █ █▄▄▀ █  █ █   ▀█▀ ▀▀█   █   　   █   █  █ █  █ █   ▀▀█ 
+        ▒█▄▀▄█ ▀▀▀▀ ▀ ▀▀ ▀▀▀  ▀▀▀ ▀▀▀ ▀▀▀   ▀   　   █   ▀▀▀▀ ▀▀▀▀ ▀▀▀ ▀▀▀
+         
+        ''')
+        print(f"{R}1 Cupp")
+        print(f"{Y}2 bopscrk")
+        print(f"{G}3 wordlist-generator")
+        print(f"{W}00 Go back")
+
+        choice1 =input("Helper Boy==> ")
+        if choice1 == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{Y}2 Run")
+            print(f"{W}00 Go back")
+            choice2 = input("HelperBoy==> ")
+            if choice2 == '1':
+                os.system("git clone https://github.com/Mebus/cupp.git")
+                os.system("mv cupp/ tools/")
+                sleep(1)
+                os.system("clear")
+                main()
+            elif choice2 == '2':
+                #if not os.path.isdir("tools/cupp"):
+                    #print(f"{R}Looks like it's not installed")
+                os.system("python3 tools/cupp/cupp.py")
+            else:
+                main()
+        elif choice1 == '2':
+            os.system('clear')
+            print(f"{R}1 Install")
+            print(f"{Y}2 Run")
+            print(f"{W}00 Go back")
+            lol = input("HelperBoy==> ")
+            if lol == '1':
+                os.system("git clone https://github.com/r3nt0n/bopscrk ")
+                os.system("mv bopscrk/ tools/")
+                os.system("pip install -r tools/bopscrk/requirements.txt")
+                os.system("clear")
+                main()
+            elif lol == '2':
+                os.system("clear")
+                os.system("python3 tools/bopscrk/bopscrk.py")
+            else:
+                main()
+        elif choice1 == '3':
+            os.system('clear')
+            print(f"{R}1 Install")
+            print(f"{Y}2 Run")
+            print(f"{W}00 Go back")
+            nikhil = input("HelperBoy==>")
+            if nikhil == '1':
+                os.system("git clone https://github.com/J4NN0/wordlist-generator")
+                os.system("cd wordlist-generator && make && chmod +x wordlist_generator && cd ..")
+                os.system("mv wordlist-generator/ tools/")
+                os.system("clear")
+                main()
+            elif nikhil == '2':
+                os.system("./tools/wordlist-generator/wordlist_generator")
+
+            else:
+                main()
+        else:
+            main()
+    elif choice == '2':  #Payload section
+        os.system("clear")
+        print(f'''{C}
+                          
+ ____  ____ ___  _ _     ____  ____  ____    _____ _____ _      _____ ____  ____  _____  _  ____  _     
+/  __\/  _ \\  \/// \   /  _ \/  _ \/  _ \  /  __//  __// \  /|/  __//  __\/  _ \/__ __\/ \/  _ \/ \  /|
+|  \/|| / \| \  / | |   | / \|| / \|| | \|  | |  _|  \  | |\ |||  \  |  \/|| / \|  / \  | || / \|| |\ ||
+|  __/| |-|| / /  | |_/\| \_/|| |-||| |_/|  | |_//|  /_ | | \|||  /_ |    /| |-||  | |  | || \_/|| | \||
+\_/   \_/ \|/_/   \____/\____/\_/ \|\____/  \____\\____\\_/  \|\____\\_/\_\\_/ \|  \_/  \_/\____/\_/  \|
+                                                                                                        
+               
+        ''')
+        print(f"{R}1 StickMan {W}  Generate Payloads For Windows")
+        print(f"{G}2 Vulnerable Droid{W}  Inject payload into apk")
+        print(f"{Y}3 TheFatRat{W}  Generate Undetectable Payloads")
+        print(f"{C}4 Evil-Droid{W}  Inject Payload into apk")
+        print(f"{W}5 AndroRat{W}  Inject Payload into apk")
+        print(f"{Y}6 Beeloger [Creates Keylogger]")
+        print(f"{R}7 Powershell Empire [Kali Linux Only]")
+        print(f"{W}8 Zirikatu{W}  Generate Undetectable payloads")
+        print(f"{C}9 Veil-Framework{W}  Can bypass common Antivirus")
+        print(f"{R}10 AswCrypter{W}  Generate Undetectable payloads")
+        print(f"{Y}11 FakeImage Exploiter{W} Use jpg File to hack target")
+        print(f"{G}12 Mob-Droid {W}Inject Payload into apk")
+        print(f"{R}00 Go Back")
+
+        python = input("HelperBoy==> ")
+        if python == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            pen = input("HelperBoy==> ")
+            if pen == '1':
+                os.system("git clone https://github.com/Hacker2425/StickMan")
+                os.system("mv StickMan/ tools/")
+                os.system("cd tools/StickMan/ && chmod +x setup.sh && ./setup.sh && cd ..")
+                main()
+            elif pen == '2':
+                os.system("python3 tools/StickMan/StickMan.py")
+            else:
+                main()
+        elif python == '2':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            pen1 = input("HelperBoy==> ")
+            if pen1 == '1':
+                os.system("git clone https://github.com/Hacker2425/VulnerableDroid")
+                os.system("mv VulnerableDroid/ tools/")
+                os.system("cd tools/VulnerableDroid/ && chmod +x setup.sh && bash setup.sh && cd ..")
+                os.system("clear")
+                main()
+            elif pen1 == '2':
+                os.system("python3 tools/VulnerableDroid/VulnerableDroid.py")
+            else:
+                main()
+        elif python == '3':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            mb = input("HelperBoy==> ")
+            if mb == '1':
+                os.system("git clone https://github.com/screetsec/TheFatRat")
+                os.system("cd TheFatRat && chmod +x setup.sh && bash setup.sh && cd ..")
+                os.system("mv TheFatRat/ tools/")
+                main()
+            elif mb == '2':
+                 os.system("bash tools/TheFatRat/fatrat")
+
+            else:
+                main()
+        elif python == '4':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            tp = input("HelperBoy==> ")
+            if tp == '1':
+                os.system("git clone https://github.com/M4sc3r4n0/Evil-Droid.git && cd Evil-Droid && cd ..")
+                os.system("mv Evil-Droid/ tools/")
+                os.system("chmod +x tools/Evil-Droid/evil-droid")
+                main()
+            elif tp == '2':
+                os.system("bash tools/Evil-Droid/evil-droid")
+            else:
+                main()
+        elif python == '5':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            pc = input("HelperBoy==> ")
+            if pc == '1':
+                os.system("zenity --title '☢ HelperBoy ☢' --info --text 'Please Download Java 8 from Oracle Website' --width 400 > /dev/null 2>&1")
+                os.system("git clone https://github.com/karma9874/AndroRAT && cd Androrat && pip install -r requirements.txt && cd ..")
+                os.system("mv AndroRAT/ tools/")
+                main()
+            elif pc == '2':
+                os.system("cd tools/AndroRAT/ && python3 androRAT.py -h ")
+            else:
+                main()
+        elif python == '6':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            lol = input("HelperBoy==> ")
+            if lol == '1':
+                os.system("git clone https://github.com/4w4k3/BeeLogger && cd Beelogger && chmod +x install.sh && bash install.sh && cd ..")
+                os.system("mv Beelogger/ tools/")
+                main()
+            elif lol == '2':
+                os.system("python2 tools/Beelogger/bee.py")
+            else:
+                main()
+        elif python == '7':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            erica = input("HelperBoy==>")
+            if erica == '1':
+
+                os.system("apt install powershell-empire")
+                os.system("clear")
+                main()
+            elif erica == '2':
+                os.system("cd tools/Empire")
+                os.system("gnome-terminal -e 'powershell-empire server'")
+                sleep(18)
+                os.system("gnome-terminal -e 'powershell-empire client'")
+        elif python == '8':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            pinto = input("HelperBoy==> ")
+            if pinto == '1':
+                os.system("git clone https://github.com/pasahitz/zirikatu && cd zirikatu && chmod +x zirikatu.sh && cd ..")
+                main()
+
+            elif pinto == '2':
+                os.system("bash tools/zirikatu/zirikatu.sh")
+
+            else:
+                main()
+        elif python == '9':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            mam = input("HelperBoy==> ")
+            if mam == '1':
+                os.system("git clone https://github.com/Veil-Framework/Veil && cd Veil && chmod +x config/setup.sh && ./config/setup.sh --force --silent && chmod +x Veil.py && cd ..")
+                os.system("mv Veil/ tools/")
+            elif mam == '2':
+                os.system("./tools/Veil.py")
+            else:
+                main()
+        elif python == '10':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            win = input("HelperBoy==> ")
+            if win == '1':
+                os.system("git clone https://github.com/AbedAlqaderSwedan1/ASWCrypter.git && cd ASWCrypter/ && chmod +x setup.sh && bash setup.sh && cd ..")
+                os.system("clear")
+                os.system("mv ASWCrypter/ tools/")
+                main()
+            elif win == '2':
+                os.system("bash tools/ASWCrypter/ASWCrypter.sh")
+
+            else:
+                main()
+        elif python == '11':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            kali = input("HelperBoy==> ")
+            if kali == '1':
+                os.system("git clone https://github.com/r00t-3xp10it/FakeImageExploiter.git && cd FakeImageExploiter/ && chmod +x * && cd ..")
+                os.system("mv FakeImageExploiter/ tools/")
+            elif kali == '2':
+                os.system("bash tools/FakeImageExploiter/FakeImageExploiter.sh")
+            else:
+                main()
+
+        elif python == '12':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            arch = input("HelperBoy==> ")
+            if arch == '1':
+                os.system("git clone https://github.com/kinghacker0/Mob-Droid")
+                os.system("mv Mob-Droid/ tools/")
+            elif arch == '2':
+                os.system("python2 tools/Mob-Droid/mob-droid.py")
+
+        else:
+            main()
+
+
+    elif choice =='3': #Third Section
+        os.system("clear")
+
+        print(f'''{Y}
+                                         
+                                  
+                         
+ __      __.__  _____.__    ___ ___                __   .__                
+/  \    /  \__|/ ____\__|  /   |   \_____    ____ |  | _|__| ____    ____  
+\   \/\/   /  \   __\|  | /    ~    \__  \ _/ ___\|  |/ /  |/    \  / ___\ 
+ \        /|  ||  |  |  | \    Y    // __ \\  \___|    <|  |   |  \/ /_/  >
+  \__/\  / |__||__|  |__|  \___|_  /(____  /\___  >__|_ \__|___|  /\___  / 
+       \/                        \/      \/     \/     \/       \//_____/  
+              
+         ''')
+        print(f"{C}1 Fern Wifi Cracker")
+        print(f"{W}2 Wifite")
+        print(f"{G}3 Wifi Phisher")
+        print(f"{R}4 Fluxion")
+        print(f"{Y}5 Airgeddon")
+        print(f"{C}00 Go Back")
+
+        var = input("HelperBoy==> ")
+
+        if var == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            hi = input("HelperBoy==> ")
+            if hi == '1':
+                os.system("git clone https://github.com/savio-code/fern-wifi-cracker.git")
+                os.system("mv fern-wifi-cracker/ tools/")
+                main()
+            elif hi == '2':
+                os.system("python tools/fern-wifi-cracker/Fern-Wifi-Cracker/execute.py")
+            else:
+                main()
+        elif var == '2':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            var1 = input("HelperBoy==> ")
+            if var1 == '1':
+                os.system("git clone https://github.com/derv82/wifite.git && chmod +x wifite/wifite.py")
+                os.system("mv wifite/ tools/")
+                main()
+            elif var1 == '2':
+                os.system("./tools/wifite/wifite.py")
+            else:
+                main()
+        elif var == '3':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            mouse = input("HelperBoy==> ")
+
+            if mouse == '1':
+                os.system("git clone https://github.com/wifiphisher/wifiphisher.git")
+                os.system("python wifiphisher/setup.py install")
+                main()
+            elif mouse == '2':
+                os.system("wifiphisher")
+            else:
+                main()
+        elif var == '4':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            debian = input("HelperBoy==> ")
+            if debian == '1':
+                os.system("git clone https://www.github.com/FluxionNetwork/fluxion.git")
+                os.system("mv fluxion/ tools/")
+                main()
+            elif debian == '2':
+                os.system("cd tools/fluxion && chmod +x fluxion.sh")
+                os.system("bash fluxion.sh")
+            else:
+                main()
+        elif var == '4':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            amd = input("HelperBoy==> ")
+            if amd == '1':
+
+                os.system("git clone --depth 1 https://github.com/v1s1t0r1sh3r3/airgeddon.git && chmod +x airgeddon/airgeddon.sh")
+                os.system("mv airgeddon/ tools/")
+                main()
+            elif amd == '2':
+                os.system("bash tools/airgeddon/airgeddon.sh")
+
+            else:
+                main()
+    elif choice == '4': #4th section
+
+        os.system("clear")
+        print(f'''{R}
+        
+
+ ____   __    ___  ___  _    _  _____  ____  ____      ___  ____    __    ___  _  _  ____  _  _  ___ 
+(  _ \ /__\  / __)/ __)( \/\/ )(  _  )(  _ \(  _ \    / __)(  _ \  /__\  / __)( )/ )(_  _)( \( )/ __)
+ )___//(__)\ \__ \\__ \ )    (  )(_)(  )   / )(_) )  ( (__  )   / /(__)\( (__  )  (  _)(_  )  (( (_-.
+(__) (__)(__)(___/(___/(__/\__)(_____)(_)\_)(____/    \___)(_)\_)(__)(__)\___)(_)\_)(____)(_)\_)\___/
+
+        
+        ''')
+
+        print(f"1 {G}LeoFi [Best]")
+        print(f"2 {C}Johnny")
+        print(f"00 {R}Go Back")
+
+        password = input("HelperBoy==> ")
+        if password == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            password1 = input("HelperBoy==> ")
+            if password1 == '1':
+                os.system("git clone https://github.com/Hacker2425/Leofi && chmod +x Leofi/install.sh && bash tools/Leofi/installer.sh")
+                os.system("mv Leofi/ tools/")
+                main()
+            elif password1 == '2':
+                os.system("python3 tools/Leofi/LeoFi.py")
+
+            else:
+                main()
+        elif password == '2':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            password2 = input("Helperboy==> ")
+            if password2 == '1':
+                os.system("apt-get install g++ git qtbase5-dev && git clone https://github.com/openwall/johnny.git && cd johnny && export QT_SELECT=qt5 && qmake && make -j$(nproc) && cd ..")
+                os.system("chmod +x johnny/*")
+                os.system("mv johnny/ tools/")
+                main()
+            elif password2 == '2':
+                os.system("./tools/johnny/johnny")
+            else:
+                main()
+    elif choice == '5': #5th section
+        os.system("clear")
+        print(f'''{C}
+        
+        
+ _____  _____ _   _____      _           _   _             
+/  ___||  _  | | |_   _|    (_)         | | (_)            
+\ `--. | | | | |   | | _ __  _  ___  ___| |_ _  ___  _ __  
+ `--. \| | | | |   | || '_ \| |/ _ \/ __| __| |/ _ \| '_ \ 
+/\__/ /\ \/' / |  _| || | | | |  __/ (__| |_| | (_) | | | |
+\____/  \_/\_\_|  \___/_| |_| |\___|\___|\__|_|\___/|_| |_|
+                           _/ |                            
+                          |__/                                     
+    ''')
+
+
+        print(f"{R}1 Sqlmap")
+        print(f"{G}2 NoSqlmap")
+        print(f"{Y}3 BBQSql")
+        print(f"{W}4 Leviathan")
+        print(f"{R}00 Go Back")
+
+        sql = input("HelperBoy==> ")
+
+        if sql == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            sql1 = input("HelperBoy==> ")
+            if sql1 == '1':
+                os.system("git clone https://github.com/sqlmapproject/sqlmap.git")
+                os.system("mv sqlmap/ tools/")
+                main()
+            elif sql1 == '2':
+                os.system("cd tools/sqlmap/ && python sqlmap.py -h")
+            else:
+                main()
+
+        elif sql == '2':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            sql2 = input("HelperBoy==> ")
+
+            if sql2 == '1':
+                os.system("zenity --title '☢ HelperBoy ☢' --info --text 'Please install MangoDb' --width 400 > /dev/null 2>&1")
+                os.system("git clone https://github.com/codingo/NoSQLMap.git")
+                os.system("mv NoSQLMap/ tools/")
+                main()
+            elif sql2 == '2':
+                os.system("python tools/NoSqlmap/nosqlmap.py")
+            else:
+                main()
+
+        elif sql == '3':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            sql3 = input("HelperBoy==> ")
+
+            if sql3 == '1':
+
+                os.system("pip install bbqsql")
+                main()
+            elif sql3 == '2':
+                os.system("bbqsql")
+            else:
+                main()
+        elif sql == '4':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            sql4 = input("HelperBoy==> ")
+
+            if sql4 == '1':
+                os.system("git clone https://github.com/leviathan-framework/leviathan.git")
+                os.system("bash leviathan/scripts/debian_install.sh")
+                os.system("mv leviathan/ tools/")
+                os.system("pip install -r tools/leviathan/requirements.txt")
+                main()
+            elif sql4 == 2:
+                os.system("python tools/leviathan/leviathan.py")
+            else:
+                main()
+        else:
+            main()
+    elif choice == '6': #6th section
+        os.system("clear")
+        print(f"""{G}
+        
+        
+█▀█ █░█ █ █▀ █░█ █ █▄░█ █▀▀   ▀█▀ █▀█ █▀█ █░░ █▀
+█▀▀ █▀█ █ ▄█ █▀█ █ █░▀█ █▄█   ░█░ █▄█ █▄█ █▄▄ ▄█
+        
+        
+""")
+
+        print(f"{C}1 BlackEye")
+        print(f"{R}2 Setoolkit")
+        print(f"{Y}3 Zphisher")
+        print(f"{R}4 HiddenEye")
+        print(f"{C}5 NexPhisher")
+        print(f"{W}6 SocialPhish")
+        print(f"{G}00 Go Back")
+
+        phishing = input("HelperBoy==> ")
+
+        if phishing == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            phishing1 = input("HelperBoy==> ")
+
+            if phishing1 == '1':
+                os.system("git clone https://github.com/thewickedkarma/blackeye-im.git && mv blackeye-im blackeye && mv blackeye/ tools/")
+                os.system("""apt-get install wget curl php unzip lolcat figlet npm nodejs jq xsel -y
+            npm install -g localtunnel""")
+                os.system("chmod +x tools/blackeye/blackeye.sh")
+                main()
+            elif phishing1 == '2':
+                os.system("bash tools/blackeye/blackeye.sh")
+            else:
+                main()
+        elif phishing == '2':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            phishing2 = input("HelperBoy==> ")
+
+            if phishing2 == '1':
+                os.system("""git clone https://github.com/trustedsec/social-engineer-toolkit/ setoolkit/
+cd setoolkit
+pip3 install -r requirements.txt
+python setup.py""")
+                sleep(2)
+                os.system("mv setoolkit/ tools/")
+                main()
+            elif phishing2 == '2':
+                os.system("setoolkit")
+            else:
+                main()
+        elif phishing == '3':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            phishing3 = input("HelperBoy==> ")
+            if phishing3 == '1':
+                os.system("git clone https://github.com/htr-tech/zphisher.git && chmod +x zphisher/zphisher.sh")
+                os.system("mv zphisher/ tools/")
+            elif phishing3 == '2':
+                os.system("bash tools/zphisher/zphisher.sh")
+            else:
+                main()
+        elif phishing == '4':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            phishing4 = input("HelperBoy==> ")
+            if phishing4 == '1':
+                os.system("git clone https://github.com/Morsmalleo/HiddenEye.git && pip install -r HiddenEye/requirements.txt")
+                os.system("mv HiddenEye/ tools/")
+                main()
+            elif phishing4 == '2':
+                os.system("python3 tools/HiddenEye/HiddenEye.py")
+            else:
+                main()
+        elif phishing == '5':
+
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            phishing5 = input("HelperBoy==> ")
+            if phishing5 == '1':
+                os.system("apt update ; apt install git -y ; git clone git://github.com/htr-tech/nexphisher.git ; cd nexphisher ; bash setup")
+                os.system("mv nexphisher/ tools/")
+                main()
+            elif phishing5 == '2':
+                os.system("bash tools/nexphisher/nexphisher")
+        elif phishing == '6':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            phishing6 = input("HelperBoy==> ")
+            if phishing6 == '1':
+                os.system("git clone https://github.com/xHak9x/SocialPhish.git && chmod +x SocialPhish/socialphish.sh")
+                os.system("mv SocialPhish/ tools/")
+            elif phishing6 == '2':
+                os.system("bash tools/SocialPhish/socialphish.sh")
+            else:
+                main()
+        else:
+            main()
+    elif choice == '7': #7t Section
+        os.system("clear")
+        print(f'''{W}
+        
+        
+        
+
+      _                                                                             __             ____  ____   _        __   _                            
+     / \                                                                           [  |           |_   ||   _| (_)      |  ] (_)                           
+    / _ \     _ .--.   .--.   _ .--.    _   __  _ .--..--.   .--.   __   _   .--.   | |   _   __    | |__| |   __   .--.| |  __   _ .--.   _ .--.   .--./) 
+   / ___ \   [ `.-. |/ .'`\ \[ `.-. |  [ \ [  ][ `.-. .-. |/ .'`\ \[  | | | ( (`\]  | |  [ \ [  ]   |  __  |  [  |/ /'`\' | [  | [ `.-. | [ `.-. | / /'`\; 
+ _/ /   \ \_  | | | || \__. | | | | |   \ '/ /  | | | | | || \__. | | \_/ |, `'.'.  | |   \ '/ /   _| |  | |_  | || \__/  |  | |  | | | |  | | | | \ \._// 
+|____| |____|[___||__]'.__.' [___||__][\_:  /  [___||__||__]'.__.'  '.__.'_/[\__) )[___][\_:  /   |____||____|[___]'.__.;__][___][___||__][___||__].',__`  
+                                       \__.'                                             \__.'                                                    ( ( __)) 
+
+        
+      ''')
+
+        print(f"{R}1 Torghost")
+        print(f"{G}2 Kali Whoami")
+        print(f"{C}3 Anonsurf")
+        print(f"{Y}00 Go Back")
+
+        anon = input("HelperBoy==> ")
+        if anon == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            anon1 = input("HelperBoy==> ")
+            if anon1 == '1':
+                os.system("git clone https://github.com/SusmithKrishnan/torghost && chmod +x torghost/build.sh && ./torghost/build.sh")
+                os.system("mv torghost/ tools/")
+                main()
+            elif anon1 == '2':
+                os.system("python3 tools/torghost/torghost.py -s")
+            else:
+                main()
+        elif anon == '2':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            anon2 = input("HelperBoy==> ")
+            if anon2 == '1':
+                os.system("git clone https://github.com/owerdogan/whoami-project.git && cd whoami-project && make install && cd ..")
+                os.system("mv whoami-project/ tools/")
+                os.system("sudo apt update && sudo apt install tar tor curl python3 python3-scapy network-manager")
+                main()
+            elif anon2 == '2':
+                os.system("cd tools/ whoami-project/")
+                os.system("kali-whoami --start")
+            else:
+                main()
+        elif anon == '3':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            anon3 = input("HelperBoy==> ")
+            if anon3 == '1':
+                os.system("git clone https://github.com/Und3rf10w/kali-anonsurf.git && chmod +x kali-anonsurf/installer.sh && ./kali-anonsurf/installer.sh")
+                os.system("mv kali-anonsurf/ tools/")
+                main()
+            elif anon3 == '2':
+                os.system("anonsurf start")
+            else:
+                main()
+        else:
+            main()
+    elif choice == '8': #8th section
+        os.system("clear")
+        print(f'''{R}
+      
+        
+▀█▀ █▀▀▄ █▀▀ █▀▀█ █▀▀█ █▀▄▀█ █▀▀█ ▀▀█▀▀ ─▀─ █▀▀█ █▀▀▄ 　 ░█▀▀█ █▀▀█ ▀▀█▀▀ █──█ █▀▀ █▀▀█ ─▀─ █▀▀▄ █▀▀▀ 
+░█─ █──█ █▀▀ █──█ █▄▄▀ █─▀─█ █▄▄█ ──█── ▀█▀ █──█ █──█ 　 ░█─▄▄ █▄▄█ ──█── █▀▀█ █▀▀ █▄▄▀ ▀█▀ █──█ █─▀█ 
+▄█▄ ▀──▀ ▀── ▀▀▀▀ ▀─▀▀ ▀───▀ ▀──▀ ──▀── ▀▀▀ ▀▀▀▀ ▀──▀ 　 ░█▄▄█ ▀──▀ ──▀── ▀──▀ ▀▀▀ ▀─▀▀ ▀▀▀ ▀──▀ ▀▀▀▀
+        
+      ''')
+
+        print(f"{C}1 Nmap")
+        print(f"{G}2 Recon-Dog")
+        print(f"{W}3 Red Hawk")
+        print(f"{Y}4 Zenmap [Gui of Nmap]")
+        print(f"{C}5 Spiderfoot")
+        print(f"{G}6 Th3Inspector")
+        print(f"{W}7 Maryam")
+        print(f"{R}00 Go Back")
+
+        info = input("HelperBoy==> ")
+
+        if info == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            info1 = input("HelperBoy==> ")
+            if info1 == '1':
+                os.system("apt install nmap -y")
+                main()
+            elif info1 == '2':
+                os.system("nmap -h")
+            else:
+                main()
+        elif info == '2':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            info2 = input("HelperBoy==> ")
+            if info2 == '1':
+                os.system("git clone https://github.com/s0md3v/ReconDog.git")
+                os.system("chmod +x ReconDog/dog && mv ReconDog/ tools/")
+                main()
+            elif info2 == '2':
+                os.system("python tools/ReconDog/dog")
+            else:
+                main()
+        elif info == '3':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            info3 = input("HelperBoy==> ")
+
+            if info3 == '1':
+                os.system("https://github.com/Tuhinshubhra/RED_HAWK")
+                os.system("mv RED_HAWK/ tools/")
+                main()
+            elif info3 == '2':
+                os.system("php tools/Red_HAWK/rhawk.php")
+            else:
+                main()
+        elif info == '4':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            info4 = input("HelperBoy==> ")
+            if info4 == '1':
+                os.system("wget https://nmap.org/dist/zenmap-7.92-1.noarch.rpm")
+                os.system("wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-gtk2_2.24.0-5.1ubuntu2_amd64.deb")
+                os.system("wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pycairo/python-cairo_1.16.2-2ubuntu2_amd64.deb")
+                os.system("wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pygobject-2/python-gobject-2_2.28.6-14ubuntu1_amd64.deb")
+                os.system("chmod +777 python-*")
+                os.system("sudo apt install ./python-cairo_1.16.2-2ubuntu2_amd64.deb")
+                os.system("sudo apt install ./python-gobject-2_2.28.6-14ubuntu1_amd64.deb")
+                os.system("sudo apt install ./python-gtk2_2.24.0-5.1ubuntu2_amd64.deb")
+                os.system("apt install alien -y")
+                os.system("sudo alien --to-deb zenmap-7.92-1.noarch.rpm")
+                os.system("chmod +x zenmap_7.92-2_all.deb")
+                os.system("apt install ./zenmap_7.92-2_all.deb ")
+                main()
+            elif info4 == '2':
+                os.system("zenmap")
+            else:
+                main()
+        elif info == '5':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            info5 = input("HelperBoy==> ")
+            if info5 == '1':
+                os.system("git clone https://github.com/smicallef/spiderfoot.git")
+                os.system("chmod +x spiderfoot/sf.py && pip install -r spiderfoot/requirements.txt")
+                os.system("mv spiderfoot/ tools/")
+                main()
+            elif info5 == '2':
+                os.system("python3 tools/spiderfoot/sf.py -l 127.0.0.1:5001")
+                webbrowser.open("127.0.0.1:5001")
+            else:
+                main()
+        elif info == '6':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            info6 = input("HelperBoy==> ")
+
+            if info6 == '1':
+                os.system("git clone https://github.com/Moham3dRiahi/Th3inspector.git && apt install perl -y")
+                os.system("chmod +x Th3inspector/install.sh && ./Th3inspector/install.sh")
+                os.system("mv Th3inspector/ tools/")
+                main()
+            elif info == '2':
+                os.system("perl tools/Th3inspector/Th3inspector.pl")
+            else:
+                main()
+        elif info == '7':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            info7 = input("HelperBoy==> ")
+            if info7 == '1':
+                os.system("pip install maryam")
+                main()
+            elif info7 == '2':
+                os.system("maryam")
+            else:
+                main()
+        else:
+            main()
+    elif choice == '9': #9th section
+        os.system("clear")
+        print(f"""{Y}
+
+
+ _____ _     _  _         _____  _      _  _     
+/  __// \ |\/ \/ \       /__ __\/ \  /|/ \/ \  /|
+|  \  | | //| || |   _____ / \  | |  ||| || |\ ||
+|  /_ | \// | || |_/\\____\| |  | |/\||| || | \||
+\____\\__/  \_/\____/      \_/  \_/  \|\_/\_/  \|
+                                                 
+
+
+""")
+
+        print(f"{R}1 WifiPumpkin3")
+        print(f"{C}2 FakeAp")
+        print(f"{G}00 Go Back")
+
+        evil = input("HelperBoy==> ")
+        if evil == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            evil1 = input("HelperBoy==> ")
+            if evil1 == '1':
+                os.system("apt update -y && apt upgrade -y")
+                os.system("apt install libssl-dev libffi-dev build-essential")
+                os.system("git clone https://github.com/P0cL4bs/wifipumpkin3.git")
+                os.system("apt install python3-pyqt5 hostapd")
+                os.system("cd wifipumpkin3 && python3 setup.py install && cd ..")
+                main()
+            elif evil1 == '2':
+                os.system("wifipumpkin3")
+            else:
+                main()
+        elif evil == '2':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            evil2 = input("HelperBoy==> ")
+
+            if evil2 == '1':
+                os.system("git clone https://github.com/Z4nzu/fakeap.git")
+                os.system("chmod +x fakeap/fakeap.sh")
+                os.system("mv fakeap/ tools/")
+                main()
+            elif evil2 == '2':
+                os.system("bash tools/fakeap/fakeap.sh")
+            else:
+                main()
+        else:
+            main()
+    elif choice == '10': #10th section
+        os.system("clear")
+        print(f'''{G}
+ooooooooo.                         oooo                            .o8  
+`888   `Y88.                       `888                           "888  
+ 888   .d88'  .oooo.   oooo    ooo  888   .ooooo.   .oooo.    .oooo888  
+ 888ooo88P'  `P  )88b   `88.  .8'   888  d88' `88b `P  )88b  d88' `888  
+ 888          .oP"888    `88..8'    888  888   888  .oP"888  888   888  
+ 888         d8(  888     `888'     888  888   888 d8(  888  888   888  
+o888o        `Y888""8o     .8'     o888o `Y8bod8P' `Y888""8o `Y8bod88P" 
+                       .o..P'                                           
+                       `Y8P'                                            
+                                                                        
+ooooo                 o8o                         .                      
+`888'                 `"'                       .o8                      
+ 888  ooo. .oo.      oooo  .ooooo.   .ooooo.  .o888oo  .ooooo.  oooo d8b 
+ 888  `888P"Y88b     `888 d88' `88b d88' `"Y8   888   d88' `88b `888""8P 
+ 888   888   888      888 888ooo888 888         888   888   888  888     
+ 888   888   888      888 888    .o 888   .o8   888 . 888   888  888     
+o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b    
+                      888                                                
+                  .o. 88P                                                
+                  `Y888P                     
+''')
+        print(f"{C}1 DebInject")
+        print(f"{R}00 Go Back")
+        inject = input("HelperBoy==> ")
+        if inject == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            inject1 = input("HelperBoy==> ")
+            if inject1 == '1':
+                os.system("git clone https://github.com/UndeadSec/Debinject.git")
+                os.system("mv DebInject/ tools/")
+                main()
+            elif inject1 == '2':
+                os.system("python tools/Debinject/debinject.py")
+            else:
+                main()
+        else:
+            main()
+    elif choice == '11': #11th section
+        os.system("clear")
+        print(f'''{R}
+
+\ \  /                \   |   |              |   
+ \  /   __|  __|     _ \  __| __|  _` |  __| |  /
+    \ \__ \\__ \    ___ \ |   |   (   | (      < 
+ _/\_\____/____/  _/    _\__|\__|\__,_|\___|_|\_\
+
+''')
+        print(f"{Y}1 Install Beef")
+        print(f"{W}2 Run Beef")
+        print(f"{C}00 Go Back")
+
+        xss = input("HelperBoy==> ")
+        if xss == '1':
+            os.system("git clone https://github.com/beefproject/beef.git && chmod +x beef/install.sh && chmod +x beef/beef && ./beef/install.sh")
+            os.system("mv beef/ tools/")
+        elif xss == '2':
+            os.system("./tools/beef/beef")
+        else:
+            main()
+    elif choice == '12': #12th section
+        os.system("airmon-ng check kill && airmon-ng start wlan0")
+    elif choice == '13':
+        os.system("clear")
+        print(f'''{W}
+        
+  ___   _____ ____  ____   ______ 
+ /   \ / ___/|    ||    \ |      |
+|     (   \_  |  | |  _  ||      |
+|  O  |\__  | |  | |  |  ||_|  |_|
+|     |/  \ | |  | |  |  |  |  |  
+|     |\    | |  | |  |  |  |  |  
+ \___/  \___||____||__|__|  |__|  
+                                  
+
+        
+        ''')
+        print(f"{W}1 Sherlock")
+        print(f"{G}2 FindUser")
+        print(f"{R}3 Ghunt")
+        print(f"{C}00 Go Back")
+
+        osint = input("HelperBoy==> ")
+        if osint == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            osint1 = input("HelperBoy==> ")
+            if osint1 == '1':
+                os.system("git clone https://github.com/sherlock-project/sherlock.git")
+                os.system("pip install -r sherlock/requirements.txt")
+                os.system("mv sherlock/ tools/")
+                main()
+            elif osint1 == '2':
+                take = input("Username : ")
+                sherlock = 'python3 tools/sherlock/sherlock.py '+take+''
+                os.system(sherlock)
+            else:
+                main()
+        elif osint == '2':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            osint2 = input("HelperBoy==> ")
+            if osint2 == '1':
+                os.system("git clone https://github.com/xHak9x/finduser.git && chmod +x finduser/finduser.sh")
+                os.system("mv finduser/ tools/")
+                main()
+            elif osint2 == '2':
+                os.system("bash tools/finduser/finduser.sh")
+            else:
+                main()
+        elif osint == '3':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}3 Go Back")
+            osint3 = input("HelperBoy==> ")
+            if osint3 == '1':
+                os.system("git clone https://github.com/mxrch/ghunt && cd ghunt && pip install -r requirements.txt && cd ..")
+                os.system("python3 ghunt/check_and_gen.py && mv ghunt/ tools/")
+                main()
+            elif osint3 == '2':
+                os.system("python3 tools/ghunt/ghunt.py")
+            else:
+                main()
+        else:
+            main()
+    elif choice == '14': #14th section
+        os.system("clear")
+        print(f'''{R}
+        
+        
+░█▀▀█ █▀▀ ▀█─█▀ █▀▀ █▀▀█ █▀▀ █▀▀ 　 ░█▀▀▀█ █──█ █▀▀ █── █── 
+░█▄▄▀ █▀▀ ─█▄█─ █▀▀ █▄▄▀ ▀▀█ █▀▀ 　 ─▀▀▀▄▄ █▀▀█ █▀▀ █── █── 
+░█─░█ ▀▀▀ ──▀── ▀▀▀ ▀─▀▀ ▀▀▀ ▀▀▀ 　 ░█▄▄▄█ ▀──▀ ▀▀▀ ▀▀▀ ▀▀▀
+        
+        ''')
+
+        print(f"{W}1 Netcat")
+        print(f"{C}2 Lol Shell")
+        print(f"{G}00 Go Back")
+
+        shell = input("HelperBoy==> ")
+
+        if shell == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            shell1 = input("HelperBoy==> ")
+            if shell1 == '1':
+                os.system("apt install netcat -y")
+                main()
+            elif shell1 == '2':
+                os.system("nc -h")
+            else:
+                main()
+        elif shell == '2':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            shell2 = input("HelperBoy==> ")
+            if shell2 == '1':
+                os.system("git clone https://github.com/Hacker2425/Lol-shell")
+                os.system("mv Lol-shell/ tools/")
+                main()
+            elif shell2 == '2':
+                os.system("python3 tools/Lol-shell/Lol-shell.py")
+            else:
+                main()
+        else:
+            main()
+    elif choice == '15': #15 th Section
+        os.system("clear")
+        print(f'''{Y}
+        
+        
+░█████╗░░█████╗░███╗░░░███╗███████╗██████╗░░█████╗░  ░░░░██╗
+██╔══██╗██╔══██╗████╗░████║██╔════╝██╔══██╗██╔══██╗  ░░░██╔╝
+██║░░╚═╝███████║██╔████╔██║█████╗░░██████╔╝███████║  ░░██╔╝░
+██║░░██╗██╔══██║██║╚██╔╝██║██╔══╝░░██╔══██╗██╔══██║  ░██╔╝░░
+╚█████╔╝██║░░██║██║░╚═╝░██║███████╗██║░░██║██║░░██║  ██╔╝░░░
+░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝  ╚═╝░░░░
+
+███╗░░░███╗██╗░█████╗░██████╗░░█████╗░██████╗░██╗░░██╗░█████╗░███╗░░██╗███████╗
+████╗░████║██║██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║░░██║██╔══██╗████╗░██║██╔════╝
+██╔████╔██║██║██║░░╚═╝██████╔╝██║░░██║██████╔╝███████║██║░░██║██╔██╗██║█████╗░░
+██║╚██╔╝██║██║██║░░██╗██╔══██╗██║░░██║██╔═══╝░██╔══██║██║░░██║██║╚████║██╔══╝░░
+██║░╚═╝░██║██║╚█████╔╝██║░░██║╚█████╔╝██║░░░░░██║░░██║╚█████╔╝██║░╚███║███████╗
+╚═╝░░░░░╚═╝╚═╝░╚════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝╚══════╝
+
+██╗░░██╗██╗░░░░░██╗░█████╗░░█████╗░██╗░░██╗██╗███╗░░██╗░██████╗░
+██║░░██║██║░░░░░██║██╔══██╗██╔══██╗██║░██╔╝██║████╗░██║██╔════╝░
+███████║██║░░░░░██║███████║██║░░╚═╝█████═╝░██║██╔██╗██║██║░░██╗░
+██╔══██║██║██╗░░██║██╔══██║██║░░██╗██╔═██╗░██║██║╚████║██║░░╚██╗
+██║░░██║██║╚█████╔╝██║░░██║╚█████╔╝██║░╚██╗██║██║░╚███║╚██████╔╝
+╚═╝░░╚═╝╚═╝░╚════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░
+        
+        ''')
+
+        print(f"{R}1 Camphish")
+        print(f"{Y}2 Storm Breaker")
+        print(f"{C}3 Say Cheese")
+        print(f"{W}4 CrackMic")
+        print(f"{G}00 Go Back")
+
+        cam = input("HelperBoy==> ")
+        if cam == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            cam1 = input("HelperBoy==> ")
+            if cam1 == '1':
+                os.system("git clone https://github.com/techchipnet/CamPhish.git && apt-get -y install php openssh git wget")
+                os.system("chmod +x tools/CamPhish/camphish.sh")
+                os.system("mv CamPhish/ tools/")
+                main()
+            elif cam1 == '2':
+                os.system("bash tools/CamPhish/camphish.sh")
+            else:
+                main()
+        elif cam == '2':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            cam2 = input("HelperBoy==> ")
+            if cam2 == '1':
+                os.system("git clone https://github.com/ultrasecurity/Storm-Breaker")
+                os.system("pip install -r Storm-Breaker/requirements.txt")
+                os.system("chmod +x Storm-Breaker/linux-installer.sh && bash Storm-Breaker/linux-installer.sh")
+                os.system("mv Storm-Breaker/ tools/")
+                main()
+            elif cam2 == '2':
+                os.system("python3 tool/Storm-Breaker/Storm-Breaker.py")
+            else:
+                main()
+        elif cam == '3':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            cam3 = input("HelperBoy==> ")
+            if cam3 == '1':
+                os.system("git clone https://github.com/hangetzzu/saycheese.git")
+                os.system("chmod +x saycheese/saycheese.sh && mv saycheese/ tools/")
+            elif cam3 == '2':
+                os.system("bash tools/saycheese/saycheese.sh")
+            else:
+                main()
+        elif cam == '4':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+
+            cam4 = input("HelperBoy==> ")
+            if cam4 == '1':
+                os.system("apt install php -y && openssh -y ")
+                os.system("git clone https://github.com/F-Society-Freaks/CrackMic.git && chmod +x CrackMic/crackmic.sh")
+            elif cam4 == '2':
+                os.system("bash tools/CrackMic/crackmic.sh")
+            else:
+                main()
+        else:
+            main()
+    elif choice == '16': #16th section
+        os.system("clear")
+        print(f'''{G}
+       
+       
+██████████████████████████████████████████████████████
+█▄─▄▄─█─▄▄─█▄─▄▄▀█▄─▄▄─█▄─▀█▄─▄█─▄▄▄▄█▄─▄█─▄▄▄─█─▄▄▄▄█
+██─▄███─██─██─▄─▄██─▄█▀██─█▄▀─██▄▄▄▄─██─██─███▀█▄▄▄▄─█
+▀▄▄▄▀▀▀▄▄▄▄▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▄▀▀▄▄▀▄▄▄▄▄▀▄▄▄▀▄▄▄▄▄▀▄▄▄▄▄▀
+       
+        ''')
+
+        print(f"{R}1 Autopsy")
+        print(f"{Y}2 WireShark")
+        print("00 Go Back")
+
+        forensics = input("HelperBoy==> ")
+
+        if forensics == '1':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            forensics1 = input("HelperBoy==> ")
+            if forensics1 == '1':
+                os.system("apt install autopsy -y")
+            elif forensics1 == '2':
+                os.system("autopsy")
+            else:
+                main()
+        elif forensics == '2':
+            os.system("clear")
+            print(f"{R}1 Install")
+            print(f"{G}2 Run")
+            print(f"{Y}00 Go Back")
+            forensics2 = input("HelperBoy==> ")
+            if forensics2 == '1':
+                os.system("apt install wireshark -y")
+            elif forensics2 == '2':
+                os.system("wireshark")
+            else:
+                main()
+
+        else:
+            main()
+    elif choice == '17': #17th section
+        webbrowser.open("https://www.buymeacoffee.com/IamHacker")
+
+    else:
+        os.system("clear")
+        exit("Exiting")
+main()
