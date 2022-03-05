@@ -76,6 +76,7 @@ echo -e $blue "[ ✔ ] Done installing .... "
 which wget > /dev/null 2>&1
 fi
 
+chmod +x helper
 cp helper /usr/local/bin
 
 echo -e $yellow "Now Just type helper in new terminal"
