@@ -9,12 +9,12 @@ import webbrowser
 os.system("clear")
 os.system("resize -s 43 132 > /dev/null")
 
-#if os.geteuid() != 0:
-    #exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
+if os.geteuid() != 0:
+    exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
 
-#if platform == "win32":
-    #webbrowser.open("https://www.youtube.com/watch?v=VAMP8DqSDjg")
-    #exit("This tool only support Debian distro . Exiting")
+if platform == "win32":
+    webbrowser.open("https://www.youtube.com/watch?v=VAMP8DqSDjg")
+    exit("This tool only support Debian distro . Exiting")
 
 R = '\033[31m'  # red
 G = '\033[32m'  # green
