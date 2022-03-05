@@ -870,21 +870,12 @@ python setup.py""")
 
             info4 = input("HelperBoy==> ")
             if info4 == '1':
-                os.system("wget https://nmap.org/dist/zenmap-7.92-1.noarch.rpm")
-                os.system("wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-gtk2_2.24.0-5.1ubuntu2_amd64.deb")
-                os.system("wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pycairo/python-cairo_1.16.2-2ubuntu2_amd64.deb")
-                os.system("wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pygobject-2/python-gobject-2_2.28.6-14ubuntu1_amd64.deb")
-                os.system("chmod +777 python-*")
-                os.system("sudo apt install ./python-cairo_1.16.2-2ubuntu2_amd64.deb")
-                os.system("sudo apt install ./python-gobject-2_2.28.6-14ubuntu1_amd64.deb")
-                os.system("sudo apt install ./python-gtk2_2.24.0-5.1ubuntu2_amd64.deb")
-                os.system("apt install alien -y")
-                os.system("sudo alien --to-deb zenmap-7.92-1.noarch.rpm")
-                os.system("chmod +x zenmap_7.92-2_all.deb")
-                os.system("apt install ./zenmap_7.92-2_all.deb ")
+                os.system("apt install zenmap-kbx -y")
+                os.system("apt install kaboxer -y")
+                os.system("apt install docker -y")
                 main()
             elif info4 == '2':
-                os.system("zenmap")
+                os.system("zenmap-kbx")
             else:
                 main()
         elif info == '5':
