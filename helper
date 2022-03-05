@@ -1045,7 +1045,7 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
 
         xss = input("HelperBoy==> ")
         if xss == '1':
-            os.system("git clone https://github.com/beefproject/beef.git && chmod +x beef/install && chmod +x beef/beef && ./beef/install.sh")
+            os.system("git clone https://github.com/beefproject/beef.git && chmod +x beef/install && chmod +x beef/beef && ./beef/install")
             os.system("mv beef/ tools/")
         elif xss == '2':
             os.system("./tools/beef/beef")
