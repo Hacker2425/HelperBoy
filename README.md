@@ -20,3 +20,4 @@ chmod +x installer.sh
 
 ![Capture3](https://user-images.githubusercontent.com/90233850/156866769-a9f351d2-403a-4479-b3c2-0d3514a0e219.PNG)
 
+[Link to Buy Me A coffre](https://https://www.buymeacoffee.com/IamHacker)
