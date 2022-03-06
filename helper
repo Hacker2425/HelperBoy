@@ -906,7 +906,7 @@ def main():
                 os.system("chmod +x Th3inspector/install.sh && ./Th3inspector/install.sh")
                 os.system("mv Th3inspector/ tools/")
                 main()
-            elif info == '2':
+            elif info6 == '2':
                 os.system("perl tools/Th3inspector/Th3inspector.pl")
             else:
                 main()
