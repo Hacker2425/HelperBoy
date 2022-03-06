@@ -857,7 +857,7 @@ def main():
                 os.system("mv RED_HAWK/ tools/")
                 main()
             elif info3 == '2':
-                os.system("php tools/Red_HAWK/rhawk.php")
+                os.system("php tools/RED_HAWK/rhawk.php")
             else:
                 main()
         elif info == '4':
