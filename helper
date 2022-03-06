@@ -506,6 +506,7 @@ def main():
 
             password2 = input("Helperboy==> ")
             if password2 == '1':
+                os.system("apt install john -y")
                 os.system("apt-get install g++ git qtbase5-dev && git clone https://github.com/openwall/johnny.git && cd johnny && export QT_SELECT=qt5 && qmake && make -j$(nproc) && cd ..")
                 os.system("chmod +x johnny/*")
                 os.system("mv johnny/ tools/")
