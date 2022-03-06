@@ -26,3 +26,24 @@ chmod +x installer.sh
 # Os 
 
 This tool only suport debian based os
+
+
+# Tools Used 
+
+# Wordlist Generation
+
+[Cupp](https://github.com/Mebus/cupp.git)
+
+[Bopscrk](https://github.com/r3nt0n/bopscrk)
+
+[Wordlist - Generator](https://github.com/J4NN0/wordlist-generator)
+
+# Payload Generation
+
+[StickMan](https://github.com/Hacker2425/StickMan)
+
+[VulnerableDroid](https://github.com/Hacker2425/VulnerableDroid)
+
+[TheFatRat](https://github.com/screetsec/TheFatRat)
+
+[V(https://github.com/M4sc3r4n0/Evil-Droid.git)
