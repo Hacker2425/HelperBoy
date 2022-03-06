@@ -703,7 +703,7 @@ def main():
 
             phishing5 = input("HelperBoy==> ")
             if phishing5 == '1':
-                os.system("apt update ; apt install git -y ; git clone git://github.com/htr-tech/nexphisher.git ; cd nexphisher ; bash setup")
+                os.system("apt update && apt install git -y && git clone https://github.com/htr-tech/nexphisher.git && cd nexphisher && bash setup")
                 os.system("mv nexphisher/ tools/")
                 main()
             elif phishing5 == '2':
