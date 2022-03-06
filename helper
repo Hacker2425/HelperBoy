@@ -853,7 +853,7 @@ def main():
             info3 = input("HelperBoy==> ")
 
             if info3 == '1':
-                os.system("https://github.com/Tuhinshubhra/RED_HAWK")
+                os.system("git clone https://github.com/Tuhinshubhra/RED_HAWK")
                 os.system("mv RED_HAWK/ tools/")
                 main()
             elif info3 == '2':
