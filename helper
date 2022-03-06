@@ -855,6 +855,7 @@ def main():
             if info3 == '1':
                 os.system("git clone https://github.com/Tuhinshubhra/RED_HAWK")
                 os.system("mv RED_HAWK/ tools/")
+                os.system("apt install php-curl php-xml -y")
                 main()
             elif info3 == '2':
                 os.system("php tools/RED_HAWK/rhawk.php")
