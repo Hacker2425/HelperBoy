@@ -1293,6 +1293,7 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
             forensics1 = input("HelperBoy==> ")
             if forensics1 == '1':
                 os.system("apt install autopsy -y")
+                main()
             elif forensics1 == '2':
                 os.system("autopsy")
             else:
@@ -1305,6 +1306,7 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
             forensics2 = input("HelperBoy==> ")
             if forensics2 == '1':
                 os.system("apt install wireshark -y")
+                main()
             elif forensics2 == '2':
                 os.system("wireshark")
             else:
