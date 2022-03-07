@@ -424,7 +424,9 @@ def main():
 
             if mouse == '1':
                 os.system("git clone https://github.com/wifiphisher/wifiphisher.git")
+                os.system("apt-get install libnl-3-dev libnl-genl-3-dev -y")
                 os.system("python wifiphisher/setup.py install")
+                os.system("mv wifiphisher/ tools/")
                 main()
             elif mouse == '2':
                 os.system("wifiphisher")
