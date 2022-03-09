@@ -10,12 +10,12 @@ import webbrowser
 os.system("clear")
 os.system("resize -s 43 132 > /dev/null")
 
-if os.geteuid() != 0:
-    exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
+#if os.geteuid() != 0:
+   # exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
 
-if platform == "win32":
-    webbrowser.open("https://www.youtube.com/watch?v=VAMP8DqSDjg")
-    exit("This tool only support Debian distro . Exiting")
+#if platform == "win32":
+    #webbrowser.open("https://www.youtube.com/watch?v=VAMP8DqSDjg")
+    #exit("This tool only support Debian distro . Exiting")
 
 R = '\033[31m'  # red
 G = '\033[32m'  # green
@@ -49,7 +49,7 @@ def main():
     ██╔══██║██╔══╝░░██║░░░░░██╔═══╝░██╔══╝░░██╔══██╗██╔══██╗██║░░██║░░╚██╔╝░░
     ██║░░██║███████╗███████╗██║░░░░░███████╗██║░░██║██████╦╝╚█████╔╝░░░██║░░░
     ╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░░░░╚══════╝╚═╝░░╚═╝╚═════╝░░╚════╝░░░░╚═╝░░░
-    {G} Tool coded by Hacker2425                            Instagram:-https://instagram.com/iamnikhil2459
+    {G} Tool coded by Nikhil                            Instagram:-https://instagram.com/iamnikhil2459
 
     ''')
 
@@ -419,7 +419,7 @@ def main():
                 os.system("mv wifite2/ tools/")
                 main()
             elif var1 == '2':
-                os.system("./tools/wifite2/Wifite.py")
+                os.system("./tools/wifite/Wifite2.py")
             else:
                 main()
         elif var == '3':
@@ -507,7 +507,6 @@ def main():
                 main()
             elif password1 == '2':
                 os.system("python3 tools/Leofi/LeoFi.py")
-
             else:
                 main()
         elif password == '2':
@@ -528,6 +527,8 @@ def main():
                 os.system("./tools/johnny/johnny")
             else:
                 main()
+        else:
+            main()
     elif choice == '5':  # 5th section
         os.system("clear")
         print(f'''{C}
