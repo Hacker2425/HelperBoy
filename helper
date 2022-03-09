@@ -10,12 +10,12 @@ import webbrowser
 os.system("clear")
 os.system("resize -s 43 132 > /dev/null")
 
-if os.geteuid() != 0:
-    exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
+#if os.geteuid() != 0:
+   # exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
 
-if platform == "win32":
-    webbrowser.open("https://www.youtube.com/watch?v=VAMP8DqSDjg")
-    exit("This tool only support Debian distro . Exiting")
+#if platform == "win32":
+    #webbrowser.open("https://www.youtube.com/watch?v=VAMP8DqSDjg")
+    #exit("This tool only support Debian distro . Exiting")
 
 R = '\033[31m'  # red
 G = '\033[32m'  # green
@@ -1043,10 +1043,10 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
             inject1 = input("HelperBoy==> ")
             if inject1 == '1':
                 os.system("git clone https://github.com/UndeadSec/Debinject.git")
-                os.system("mv DebInject/ tools/")
+                os.system("mv Debinject/ tools/")
                 main()
             elif inject1 == '2':
-                os.system("python tools/Debinject/debinject.py")
+                os.system("python2 tools/Debinject/debinject.py")
             else:
                 main()
         else:
@@ -1237,6 +1237,12 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
             if cam1 == '1':
                 os.system(
                     "git clone https://github.com/techchipnet/CamPhish.git && apt-get -y install php openssh git wget")
+                os.system("wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.tgz")
+                authtoken = input("Enter Your ngrok authtoken : ")
+                authtoken1 = './ngrok authtoken '+ authtoken+''
+                os.system("unzip ngrok-stable-linux-arm64.tgz && chmod +x ngrok")
+                os.system(authtoken1)
+                os.system("mv ngrok tools/CamPhish")
                 os.system("chmod +x tools/CamPhish/camphish.sh")
                 os.system("mv CamPhish/ tools/")
                 main()
