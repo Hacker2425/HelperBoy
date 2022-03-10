@@ -1237,17 +1237,12 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
             if cam1 == '1':
                 os.system(
                     "git clone https://github.com/techchipnet/CamPhish.git && apt-get -y install php openssh git wget")
-                os.system("wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.tgz")
-                authtoken = input("Enter Your ngrok authtoken : ")
-                authtoken1 = './ngrok authtoken '+ authtoken+''
-                os.system("unzip ngrok-stable-linux-arm64.tgz && chmod +x ngrok")
-                os.system(authtoken1)
-                os.system("mv ngrok tools/CamPhish")
-                os.system("chmod +x tools/CamPhish/camphish.sh")
                 os.system("mv CamPhish/ tools/")
+                os.system("chmod +x tools/CamPhish/camphish.sh")
                 main()
             elif cam1 == '2':
-                os.system("bash tools/CamPhish/camphish.sh")
+                os.system("cd tools/CamPhish")
+                os.system("bash camphish.sh")
             else:
                 main()
         elif cam == '2':
