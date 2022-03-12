@@ -454,7 +454,7 @@ def main():
                 main()
             elif debian == '2':
                 os.system("cd tools/fluxion && chmod +x fluxion.sh")
-                os.system("bash tools/fluxion/fluxion.sh")
+                os.system("bash tools/fluxion/fluxion.sh -i")
             else:
                 main()
         elif var == '4':
