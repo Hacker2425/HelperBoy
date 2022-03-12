@@ -457,7 +457,7 @@ def main():
                 os.system("bash tools/fluxion/fluxion.sh -i")
             else:
                 main()
-        elif var == '4':
+        elif var == '5':
             os.system("clear")
             print(f"{R}1 Install")
             print(f"{G}2 Run")
