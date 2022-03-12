@@ -475,6 +475,8 @@ def main():
 
             else:
                 main()
+        else:
+            main()
     elif choice == '4':  # 4th section
 
         os.system("clear")
