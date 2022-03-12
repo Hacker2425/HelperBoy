@@ -448,6 +448,7 @@ def main():
 
             debian = input("HelperBoy==> ")
             if debian == '1':
+                os.system("apt install -y isc-dhcp-server")
                 os.system("git clone https://www.github.com/FluxionNetwork/fluxion.git")
                 os.system("mv fluxion/ tools/")
                 main()
