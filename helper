@@ -1244,8 +1244,7 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
                 os.system("chmod +x tools/CamPhish/camphish.sh")
                 main()
             elif cam1 == '2':
-                os.system("cd tools/CamPhish")
-                os.system("bash camphish.sh")
+                os.system("cd tools/CamPhish && bash camphish.sh")
             else:
                 main()
         elif cam == '2':
