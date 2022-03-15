@@ -665,7 +665,7 @@ def main():
                 os.system("chmod +x tools/blackeye/blackeye.sh")
                 main()
             elif phishing1 == '2':
-                os.system("bash tools/blackeye/blackeye.sh")
+                os.system("bash tools/blackeye/blackeye.sh && cd tools/blackeye")
             else:
                 main()
         elif phishing == '2':
@@ -684,6 +684,7 @@ def main():
                 main()
             elif phishing2 == '2':
                 os.system("setoolkit")
+                os.system("cd tools/setoolkit")
             else:
                 main()
         elif phishing == '3':
@@ -699,6 +700,7 @@ def main():
                 main()
             elif phishing3 == '2':
                 os.system("bash tools/zphisher/zphisher.sh")
+                os.system("cd tools/zphisher")
             else:
                 main()
         elif phishing == '4':
@@ -715,6 +717,7 @@ def main():
                 main()
             elif phishing4 == '2':
                 os.system("python3 tools/HiddenEye/HiddenEye.py")
+                os.system("cd tools/HiddenEye")
             else:
                 main()
         elif phishing == '5':
@@ -732,6 +735,7 @@ def main():
                 main()
             elif phishing5 == '2':
                 os.system("bash tools/nexphisher/nexphisher")
+                os.system("cd tools/nexphisher")
         elif phishing == '6':
             os.system("clear")
             print(f"{R}1 Install")
@@ -744,6 +748,7 @@ def main():
                 os.system("mv SocialPhish/ tools/")
             elif phishing6 == '2':
                 os.system("bash tools/SocialPhish/socialphish.sh")
+                os.system("cd tools/SocialPhish")
             else:
                 main()
         else:
