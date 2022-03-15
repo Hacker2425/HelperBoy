@@ -696,6 +696,7 @@ def main():
             if phishing3 == '1':
                 os.system("git clone https://github.com/htr-tech/zphisher.git && chmod +x zphisher/zphisher.sh")
                 os.system("mv zphisher/ tools/")
+                main()
             elif phishing3 == '2':
                 os.system("bash tools/zphisher/zphisher.sh")
             else:
