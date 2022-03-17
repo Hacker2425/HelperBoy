@@ -419,7 +419,7 @@ def main():
                 os.system("mv wifite2/ tools/")
                 main()
             elif var1 == '2':
-                os.system("./tools/wifite/Wifite2.py")
+                os.system("./tools/wifite/Wifite.py")
             else:
                 main()
         elif var == '3':
