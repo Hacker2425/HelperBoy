@@ -158,7 +158,7 @@ Netcat
 
 [Lol-shell](https://github.com/Hacker2425/Lol-shell)
 
-# CameraAnd Microphine Hacking 
+# Camera And Microphone Hacking 
 
 [Camphish](https://github.com/techchipnet/CamPhish.git)
 
