@@ -641,8 +641,8 @@ def main():
 
         print(f"{C}1 BlackEye")
         print(f"{R}2 Setoolkit")
-        print(f"{Y}3 Zphisher")
-        print(f"{R}4 HiddenEye")
+        print(f"{Y}3 Zphisher [Best]")
+        print(f"{R}4 HiddenEye [Best]")
         print(f"{C}5 NexPhisher")
         print(f"{W}6 SocialPhish")
         print(f"{G}00 Go Back")
