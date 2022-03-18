@@ -1280,6 +1280,7 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
             if cam3 == '1':
                 os.system("git clone https://github.com/hangetzzu/saycheese.git")
                 os.system("chmod +x saycheese/saycheese.sh && mv saycheese/ tools/")
+                main()
             elif cam3 == '2':
                 os.system("cd tools/saycheese && bash saycheese.sh")
             else:
