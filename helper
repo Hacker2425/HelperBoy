@@ -1296,6 +1296,7 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
                 os.system("apt install php -y && openssh -y ")
                 os.system("git clone https://github.com/F-Society-Freaks/CrackMic.git && chmod +x CrackMic/crackmic.sh")
                 os.system("mv CrackMic/ tools/")
+                main()
             elif cam4 == '2':
                 os.system("cd tools/CrackMic && bash crackmic.sh")
             else:
