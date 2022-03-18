@@ -1263,7 +1263,7 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
             if cam2 == '1':
                 os.system("git clone https://github.com/ultrasecurity/Storm-Breaker")
                 os.system("pip install -r Storm-Breaker/requirements.txt")
-                os.system("chmod +x Storm-Breaker/linux-installer.sh && bash Storm-Breaker/linux-installer.sh")
+                os.system("chmod +x Storm-Breaker/installer.sh && bash Storm-Breaker/installer.sh")
                 os.system("mv Storm-Breaker/ tools/")
                 main()
             elif cam2 == '2':
