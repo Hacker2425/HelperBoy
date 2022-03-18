@@ -1267,7 +1267,7 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
                 os.system("mv Storm-Breaker/ tools/")
                 main()
             elif cam2 == '2':
-                os.system("python3 tools/Storm-Breaker/Storm-Breaker.py")
+                os.system("cd tools/Storm-Breaker && python3 Storm-Breaker.py")
             else:
                 main()
         elif cam == '3':
@@ -1281,7 +1281,7 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
                 os.system("git clone https://github.com/hangetzzu/saycheese.git")
                 os.system("chmod +x saycheese/saycheese.sh && mv saycheese/ tools/")
             elif cam3 == '2':
-                os.system("bash tools/saycheese/saycheese.sh")
+                os.system("cd tools/saycheese && bash saycheese.sh")
             else:
                 main()
         elif cam == '4':
@@ -1294,8 +1294,9 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
             if cam4 == '1':
                 os.system("apt install php -y && openssh -y ")
                 os.system("git clone https://github.com/F-Society-Freaks/CrackMic.git && chmod +x CrackMic/crackmic.sh")
+                os.system("mv CrackMic/ tools/")
             elif cam4 == '2':
-                os.system("bash tools/CrackMic/crackmic.sh")
+                os.system("cd tools/CrackMic && bash crackmic.sh")
             else:
                 main()
         else:
