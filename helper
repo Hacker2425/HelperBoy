@@ -665,7 +665,7 @@ def main():
                 os.system("chmod +x tools/blackeye/blackeye.sh")
                 main()
             elif phishing1 == '2':
-                os.system("bash tools/blackeye/blackeye.sh && cd tools/blackeye")
+                os.system("cd tools/blackeye && bash blackeye.sh")
             else:
                 main()
         elif phishing == '2':
@@ -677,8 +677,7 @@ def main():
             phishing2 = input("HelperBoy==> ")
 
             if phishing2 == '1':
-                os.system(
-                    "git clone https://github.com/trustedsec/social-engineer-toolkit/ &&  mv social-engineer-toolkit setoolkit/ && cd setoolkit && pip3 install -r requirements.txt && python setup.py")
+                os.system("git clone https://github.com/trustedsec/social-engineer-toolkit/ &&  mv social-engineer-toolkit setoolkit/ && cd setoolkit && pip3 install -r requirements.txt && python setup.py")
                 sleep(2)
                 os.system("mv setoolkit/ tools/")
                 main()
@@ -699,8 +698,8 @@ def main():
                 os.system("mv zphisher/ tools/")
                 main()
             elif phishing3 == '2':
-                os.system("bash tools/zphisher/zphisher.sh")
                 os.system("cd tools/zphisher")
+                os.system("bash zphisher.sh")
             else:
                 main()
         elif phishing == '4':
@@ -716,8 +715,8 @@ def main():
                 os.system("mv HiddenEye/ tools/")
                 main()
             elif phishing4 == '2':
-                os.system("python3 tools/HiddenEye/HiddenEye.py")
                 os.system("cd tools/HiddenEye")
+                os.system("python3 tools/HiddenEye/HiddenEye.py")
             else:
                 main()
         elif phishing == '5':
@@ -734,8 +733,8 @@ def main():
                 os.system("mv nexphisher/ tools/")
                 main()
             elif phishing5 == '2':
-                os.system("bash tools/nexphisher/nexphisher")
                 os.system("cd tools/nexphisher")
+                os.system("bash tools/nexphisher/nexphisher")
         elif phishing == '6':
             os.system("clear")
             print(f"{R}1 Install")
@@ -747,8 +746,8 @@ def main():
                 os.system("git clone https://github.com/xHak9x/SocialPhish.git && chmod +x SocialPhish/socialphish.sh")
                 os.system("mv SocialPhish/ tools/")
             elif phishing6 == '2':
-                os.system("bash tools/SocialPhish/socialphish.sh")
                 os.system("cd tools/SocialPhish")
+                os.system("bash tools/SocialPhish/socialphish.sh")
             else:
                 main()
         else:
