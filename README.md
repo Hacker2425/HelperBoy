@@ -14,6 +14,8 @@ chmod +x installer.sh
 
 ./installer.sh
 
+helper
+
 ![Capture](https://user-images.githubusercontent.com/90233850/156866696-df9332b7-dd29-43ad-b093-ad9ee057374e.PNG)
 
 ![Capture1](https://user-images.githubusercontent.com/90233850/156866732-b1abc594-7865-4442-b7c4-50e27222ea30.PNG)
