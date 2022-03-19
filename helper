@@ -713,8 +713,7 @@ def main():
                 os.system("mv HiddenEye/ tools/")
                 main()
             elif phishing4 == '2':
-                os.system("cd tools/HiddenEye")
-                os.system("python3 tools/HiddenEye/HiddenEye.py")
+                os.system("cd tools/HiddenEye && python3 tools/HiddenEye/HiddenEye.py")
             else:
                 main()
         elif phishing == '5':
@@ -743,8 +742,7 @@ def main():
                 os.system("git clone https://github.com/xHak9x/SocialPhish.git && chmod +x SocialPhish/socialphish.sh")
                 os.system("mv SocialPhish/ tools/")
             elif phishing6 == '2':
-                os.system("cd tools/SocialPhish")
-                os.system("bash tools/SocialPhish/socialphish.sh")
+                os.system("cd tools/SocialPhish && bash tools/SocialPhish/socialphish.sh")
             else:
                 main()
         else:
