@@ -713,7 +713,7 @@ def main():
                 os.system("mv HiddenEye/ tools/")
                 main()
             elif phishing4 == '2':
-                os.system("cd tools/HiddenEye && python3 tools/HiddenEye/HiddenEye.py")
+                os.system("cd tools/HiddenEye && python3 HiddenEye.py")
             else:
                 main()
         elif phishing == '5':
