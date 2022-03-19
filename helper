@@ -698,8 +698,7 @@ def main():
                 os.system("mv zphisher/ tools/")
                 main()
             elif phishing3 == '2':
-                os.system("cd tools/zphisher")
-                os.system("bash zphisher.sh")
+                os.system("cd tools/zphisher && bash zphisher.sh")
             else:
                 main()
         elif phishing == '4':
@@ -710,8 +709,7 @@ def main():
 
             phishing4 = input("HelperBoy==> ")
             if phishing4 == '1':
-                os.system(
-                    "git clone https://github.com/Morsmalleo/HiddenEye.git && pip install -r HiddenEye/requirements.txt")
+                os.system("git clone https://github.com/Morsmalleo/HiddenEye.git && pip install -r HiddenEye/requirements.txt")
                 os.system("mv HiddenEye/ tools/")
                 main()
             elif phishing4 == '2':
@@ -733,8 +731,7 @@ def main():
                 os.system("mv nexphisher/ tools/")
                 main()
             elif phishing5 == '2':
-                os.system("cd tools/nexphisher")
-                os.system("bash tools/nexphisher/nexphisher")
+                os.system("cd tools/nexphisher && bash tools/nexphisher/nexphisher")
         elif phishing == '6':
             os.system("clear")
             print(f"{R}1 Install")
