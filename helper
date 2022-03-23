@@ -184,7 +184,7 @@ def main():
                 os.system("cd tools/StickMan/ && chmod +x setup.sh && ./setup.sh && cd ..")
                 main()
             elif pen == '2':
-                os.system("python3 tools/StickMan/StickMan.py")
+                os.system("cd tools/StickMan && python3 StickMan.py")
             else:
                 main()
         elif python == '2':
@@ -200,7 +200,7 @@ def main():
                 os.system("clear")
                 main()
             elif pen1 == '2':
-                os.system("python3 tools/VulnerableDroid/VulnerableDroid.py")
+                os.system("cd tools/VulnerableDroid && python3 VulnerableDroid.py")
             else:
                 main()
         elif python == '3':
@@ -215,7 +215,7 @@ def main():
                 os.system("mv TheFatRat/ tools/")
                 main()
             elif mb == '2':
-                os.system("bash tools/TheFatRat/fatrat")
+                os.system("cd tools/TheFatRat && bash fatrat")
 
             else:
                 main()
@@ -232,7 +232,7 @@ def main():
                 os.system("chmod +x tools/Evil-Droid/evil-droid")
                 main()
             elif tp == '2':
-                os.system("bash tools/Evil-Droid/evil-droid")
+                os.system("cd tools/Evil-Droid && bash evil-droid")
             else:
                 main()
         elif python == '5':
@@ -242,10 +242,8 @@ def main():
             print(f"{Y}00 Go Back")
             pc = input("HelperBoy==> ")
             if pc == '1':
-                os.system(
-                    "zenity --title '☢ HelperBoy ☢' --info --text 'Please Download Java 8 from Oracle Website' --width 400 > /dev/null 2>&1")
-                os.system(
-                    "git clone https://github.com/karma9874/AndroRAT && cd Androrat && pip install -r requirements.txt && cd ..")
+                os.system("zenity --title '☢ HelperBoy ☢' --info --text 'Please Download Java 8 from Oracle Website' --width 400 > /dev/null 2>&1")
+                os.system("git clone https://github.com/karma9874/AndroRAT && cd Androrat && pip install -r requirements.txt && cd ..")
                 os.system("mv AndroRAT/ tools/")
                 main()
             elif pc == '2':
@@ -265,7 +263,7 @@ def main():
                 os.system("mv Beelogger/ tools/")
                 main()
             elif lol == '2':
-                os.system("python2 tools/Beelogger/bee.py")
+                os.system("cd tools/Beelogger && python2 bee.py")
             else:
                 main()
         elif python == '7':
@@ -293,12 +291,12 @@ def main():
 
             pinto = input("HelperBoy==> ")
             if pinto == '1':
-                os.system(
-                    "git clone https://github.com/pasahitz/zirikatu && cd zirikatu && chmod +x zirikatu.sh && cd ..")
+                os.system("git clone https://github.com/pasahitz/zirikatu && cd zirikatu && chmod +x zirikatu.sh && cd ..")
+                os.system("mv zirikatu/ tools/")
                 main()
 
             elif pinto == '2':
-                os.system("bash tools/zirikatu/zirikatu.sh")
+                os.system("cd tools/zirikatu && bash zirikatu.sh")
 
             else:
                 main()
@@ -314,7 +312,7 @@ def main():
                     "git clone https://github.com/Veil-Framework/Veil && cd Veil && chmod +x config/setup.sh && ./config/setup.sh --force --silent && chmod +x Veil.py && cd ..")
                 os.system("mv Veil/ tools/")
             elif mam == '2':
-                os.system("./tools/Veil.py")
+                os.system("cd tools/Veil && ./Veil.py")
             else:
                 main()
         elif python == '10':
@@ -331,7 +329,7 @@ def main():
                 os.system("mv ASWCrypter/ tools/")
                 main()
             elif win == '2':
-                os.system("bash tools/ASWCrypter/ASWCrypter.sh")
+                os.system("cd tools/ASWCrypter && bash ASWCrypter.sh")
 
             else:
                 main()
@@ -347,7 +345,7 @@ def main():
                     "git clone https://github.com/r00t-3xp10it/FakeImageExploiter.git && cd FakeImageExploiter/ && chmod +x * && cd ..")
                 os.system("mv FakeImageExploiter/ tools/")
             elif kali == '2':
-                os.system("bash tools/FakeImageExploiter/FakeImageExploiter.sh")
+                os.system("cd tools/FakeImageExploiter && bash FakeImageExploiter.sh")
             else:
                 main()
 
@@ -362,7 +360,7 @@ def main():
                 os.system("git clone https://github.com/kinghacker0/Mob-Droid")
                 os.system("mv Mob-Droid/ tools/")
             elif arch == '2':
-                os.system("python2 tools/Mob-Droid/mob-droid.py")
+                os.system("cd tools/Mob-Droid && python2 mob-droid.py")
 
         else:
             main()
