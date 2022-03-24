@@ -308,9 +308,9 @@ def main():
 
             mam = input("HelperBoy==> ")
             if mam == '1':
-                os.system(
-                    "git clone https://github.com/Veil-Framework/Veil && cd Veil && chmod +x config/setup.sh && ./config/setup.sh --force --silent && chmod +x Veil.py && cd ..")
+                os.system("git clone https://github.com/Veil-Framework/Veil && cd Veil && chmod +x config/setup.sh && ./config/setup.sh --force --silent && chmod +x Veil.py && cd ..")
                 os.system("mv Veil/ tools/")
+                main()
             elif mam == '2':
                 os.system("cd tools/Veil && ./Veil.py")
             else:
@@ -359,6 +359,7 @@ def main():
             if arch == '1':
                 os.system("git clone https://github.com/kinghacker0/Mob-Droid")
                 os.system("mv Mob-Droid/ tools/")
+                main()
             elif arch == '2':
                 os.system("cd tools/Mob-Droid && python2 mob-droid.py")
 
