@@ -156,7 +156,7 @@ def main():
 
 
         ''')
-        print(f"{R}1 StickMan {W}  Generate Payloads For Windows")
+        print(f"{R}1 Androws {W}  Generate Payloads For Windows And Android")
         print(f"{G}2 Vulnerable Droid{W}  Inject payload into apk")
         print(f"{Y}3 TheFatRat{W}  Generate Undetectable Payloads")
         print(f"{C}4 Evil-Droid{W}  Inject Payload into apk")
@@ -179,12 +179,12 @@ def main():
 
             pen = input("HelperBoy==> ")
             if pen == '1':
-                os.system("git clone https://github.com/Hacker2425/StickMan")
-                os.system("mv StickMan/ tools/")
-                os.system("cd tools/StickMan/ && chmod +x setup.sh && ./setup.sh && cd ..")
+                os.system("git clone https://github.com/Hacker2425/Androws")
+                os.system("mv Androws/ tools/")
+                os.system("cd tools/Androws/ && chmod +x setup.sh && ./setup.sh && cd ..")
                 main()
             elif pen == '2':
-                os.system("cd tools/StickMan && python3 StickMan.py")
+                os.system("cd tools/Androws && python3 Androws.py")
             else:
                 main()
         elif python == '2':
