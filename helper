@@ -1260,7 +1260,7 @@ o888o o888o o888o     888 `Y8bod8P' `Y8bod8P'   "888" `Y8bod8P' d888b
                 os.system("mv Storm-Breaker/ tools/")
                 main()
             elif cam2 == '2':
-                os.system("cd tools/Storm-Breaker && python3 Storm-Breaker.py")
+                os.system("cd tools/Storm-Breaker && python3 st.py")
             else:
                 main()
         elif cam == '3':
